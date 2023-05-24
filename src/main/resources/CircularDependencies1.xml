@@ -2,6 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    测试两个类互相依赖，且通过构造函数参数互相依赖-->
     <bean id="productService" class="CircularDependencies1.ProductService">
         <constructor-arg name="productRepository" ref="productRepository"></constructor-arg>
     </bean>
